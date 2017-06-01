@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+	<head>
+			<link href="/webjars/materializecss/0.97.7/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+			<title>Sistema de controle de estoque</title>
+	</head>
+	<body bgcolor="#D0DED7">
+		<div class="container">
+    		<div class="row center">
+			        <h1 class="header center green-text">Estoque security</h1>
+			        <h5 class="header col s12 light"><strong>Sistema de Controle de estoque</strong></h5>
+    		</div>
+    					
+	    	<div class="row center">			        									
+				<div class="input-field col s4" >
+					<input placeholder="Nome do Cliente" id="nome" name="nomeCliente" type="text" class="validate"/>
+					<label for="nome" > Nome do Cliente</label>
+				</div>													
+				<div class="input-field col s4" >
+					<input placeholder="Cpf do cliente" id="cpf" name="cpfCliente" type="text" class="validate"/>
+					<label for="cpf" >  Cpf do cliente</label>
+				</div>
+			        <a th:href="@{/clientes/}" class="btn-large waves-effect waves-light teal">Cadastro de Cliente</a><br/><br/><br/>			        
+			</div>
+			<div>
+				<table border="1">
+					<tr>
+						<th width="100"><a href="fruta.html" class="toolbar-link">Fruta</a></th>
+						<th width="100"><a href="limpeza.html" class="toolbar-link">limpeza</a></th>
+						<th width="100"><a href="eletronico.html" class="toolbar-link">Eletrônico</a></th>
+						<th width="100"><a href="verdura.html" class="toolbar-link">Verdura</a></th>
+						<th width="100"><a href="legume.html" class="toolbar-link">Legume</a></th>
+						<th width="100"><a href="software.html" class="toolbar-link">Software</a></th>
+						<th width="100"><a href="hardware.html" class="toolbar-link">Hardware</a></th>
+					</tr>
+					<tr>						
+						<th><a href="fruta.html" class="toolbar-link"><img th:src="@{/img/imagem1.png}" width="100dp" height="100dp"/></a></th>
+						<th><img th:src="@{/img/imagem2.png}" width="100dp" height="100dp" /></th>
+						<th><img th:src="@{/img/imagem3.png}" width="100dp" height="100dp" /></th>
+						<th><img th:src="@{/img/imagem4.png}" width="100dp" height="100dp" /></th>
+						<th><img th:src="@{/img/imagem5.png}" width="100dp" height="100dp" /></th>
+						<th><img th:src="@{/img/imagem6.png}" width="100dp" height="100dp" /></th>
+						<th><img th:src="@{/img/imagem7.png}" width="100dp" height="100dp" /></th>
+					</tr>
+				</table>				
+			</div>
+			
+	   </div>	
+			<script src="/webjars/jquery/2.2.4/jquery.js"></script>
+			<script src="/webjars/materializecss/0.97.7/js/materialize.js"></script>
+			
+	</body>
+
+</html>

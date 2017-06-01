@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html 
+	xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+>
+
+	<head>
+		<link href="/webjars/materializecss/0.97.7/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	
+	    <title>Cliente Security</title>
+	</head>
+
+	<body bgcolor="#D0DED7">
+		
+		<div class="container">
+				<div class="row valing-wrapper">
+						<div class="col s6">
+								<h3>Gerenciar Clientes</h3>
+						</div>						
+						
+				</div>						 					 					 					 					 
+				<div class="row">				
+					<form action="/clientes/salvar" method="Post">
+							<div class="input-field col s4" >
+								<input placeholder="Nome do Cliente" id="nome" name="nomeCliente" type="text" class="validate"/>
+								<label for="nome" > Nome do Cliente</label>
+							</div>							
+							
+							<div class="input-field col s4" >
+								<input placeholder="Cpf do cliente" id="cpf" name="cpfCliente" type="text" class="validate"/>
+								<label for="cpf" >  Cpf do cliente</label>
+							</div>
+														
+							<div class="input-field col s4" >
+								<input placeholder="Idade do Cliente" id="idade" name="idadeCliente" type="text" class="validate"/>
+								<label for="idade" > Idade do Cliente</label>
+							</div>							
+							<div class="input-field col s4" >
+								<input placeholder="Email do Cliente" id="email" name="emailCliente" type="text" class="validate"/>
+								<label for="email" > Email do Cliente</label>
+							</div>							
+							<div class="input-field col s4" >
+								<input placeholder="Senha do Cliente" id="senha" name="senhaCliente" type="password" class="validate"/>
+								<label for="senha" > Senha do Cliente</label>
+							</div>							
+							<div class="input-field col s4" >
+								<input placeholder="Telefone do Cliente" id="telefone" name="telefoneCliente" type="text" class="validate"/>
+								<label for="telefone" >Telefone do Cliente</label>
+							</div>														
+													
+							<div class="col s4">
+								<button class="valing btn-large waves-effect waves-light teal right" type="submit" name="action">Cadastrar cliente</button>
+							</div>
+													
+							<div class="col s6">
+								<a href="/erro/" class="valing btn-large waves-effect waves-light teal right">esqueceu a senha</a>						
+						</div>
+					</form>					
+				</div>
+							
+		</div>			
+		<script src="/webjars/jquery/2.2.4/jquery.js"></script>
+		<script src="/webjars/materializecss/0.97.7/js/materialize.js"></script>
+	</body>	
+
+</html>
