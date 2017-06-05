@@ -9,19 +9,22 @@
 	<body bgcolor="#D0DED7">
 		<div class="container">
     		<div class="row center">
-			        <h1 class="header center green-text">Estoque security</h1>			        			        
+			        <h1 class="header center green-text">Controle de estoque!</h1>			        			        
     		</div>
     					
 	    	<div class="row center">			        									
-				<div class="input-field col s4" >
-					<input placeholder="Nome do Cliente" id="nome" name="nomeCliente" type="text" class="validate"/>
-					<label for="nome" > Nome do Cliente</label>
-				</div>													
-				<div class="input-field col s4" >
-					<input placeholder="Cpf do cliente" id="cpf" name="cpfCliente" type="text" class="validate"/>
-					<label for="cpf" >  Cpf do cliente</label>
-				</div>
-			        <a th:href="@{/cadastro-cliente/}" class="btn-large waves-effect waves-light teal">Cadastro de Cliente</a><br/><br/><br/>			        
+				<form>
+																
+						Digite seu email:<br/>						
+						<input type="text" name="input"/><br/><br/>
+			
+						Digite sua senha:<br/>
+						<input type="password" name="input"/><br/><br/>
+			
+				</form>
+
+		        <a th:href="@{/cadastro-cliente/}" class="btn-large waves-effect waves-light teal">Cadastrar</a>
+		        <a th:href="@{/login/}" class="btn-large waves-effect waves-light teal">Login</a><br/><br/><br/>			        
 			</div>
 			<div>
 				<table border="1">
