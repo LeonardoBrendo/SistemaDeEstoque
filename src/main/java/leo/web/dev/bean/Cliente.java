@@ -7,6 +7,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.NotNull;
+import org.hibernate.validator.constraints.NotBlank;
 
 @Entity
 public class Cliente {
@@ -15,11 +17,17 @@ public class Cliente {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	
+	@NotBlank
 	private String nome;
+	@NotBlank
 	private String cpf;
+	@NotNull
 	private Integer idade;
+	@NotBlank
 	private String email;
-	private String senha;	
+	@NotBlank
+	private String senha;
+	@NotBlank
 	private String telefone;
 	
 	@OneToMany
