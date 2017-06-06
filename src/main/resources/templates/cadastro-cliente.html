@@ -21,33 +21,37 @@
 						
 				</div>						 					 					 					 					 
 				<div class="container-fluid">				
-					<form action="/cadastro-cliente/salvar" method="Post">
-					
+					<form action="/cadastro-cliente/salvar" method="Post" th:object="${cliente}">
+						
+							<div class="alert alert-success" th:if="${!#strings.isEmpty(mensagem)}">
+								<span th:text="${mensagem}"></span>
+							</div>
+							
 							<div class="form-group">
 								<label for="nome"><strong>Nome</strong></label> 
-								<input id="nome" name="nomeCliente" type="text" class="form-control"/>								
+								<input id="nome" name="nomeCliente" type="text" class="form-control" th:field="*{nome}"/>								
 							</div>							
 							
 							<div class="form-group">
 								<label for="cpf">CPF</label>
-								<input id="cpf" name="cpfCliente" type="text" class="form-control"/>
+								<input id="cpf" name="cpfCliente" type="text" class="form-control" th:field="*{cpf}"/>
 							</div>
 														
 							<div class="form-group">
 								<label for="idade">Idade</label>
-								<input id="idade" name="idadeCliente" type="text" class="form-control"/>
+								<input id="idade" name="idadeCliente" type="text" class="form-control" th:field="*{idade}"/>
 							</div>
 							<div class="form-group">
 								<label for="email">Email</label>
-								<input id="email" name="emailCliente" type="text" class="form-control"/>
+								<input id="email" name="emailCliente" type="text" class="form-control" th:field="*{email}"/>
 							</div>
 							<div class="form-group">
 								<label for="senha">Senha</label>
-								<input id="senha" name="senhaCliente" type="text" class="form-control"/>
+								<input id="senha" name="senhaCliente" type="text" class="form-control" th:field="*{senha}"/>
 							</div>
 							<div class="form-group">
 								<label for="telefone">Telefone</label>
-								<input id="telefone" name="telefoneCliente" type="text" class="form-control"/>
+								<input id="telefone" name="telefoneCliente" type="text" class="form-control" th:field="*{telefone}"/>
 							</div>							
 													
 							<div class="col s4">
