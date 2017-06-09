@@ -2,12 +2,14 @@ package leo.web.dev.bean;
 
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
+
 import org.hibernate.validator.constraints.NotBlank;
 
 @Entity
@@ -17,17 +19,28 @@ public class Cliente {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	
-	@NotBlank
+	@Column(nullable = true, length = 50)
+    @NotBlank(message = "Nome é uma informação obrigatória.")
 	private String nome;
-	@NotBlank
+	
+	@Column(nullable = true, length = 50)
+    @NotBlank(message = "cpf é uma informação obrigatória.")
 	private String cpf;
-	@NotNull
+	
+	@Column(nullable = true, length = 50)
+    @NotNull(message = "idade é uma informação obrigatória.")
 	private Integer idade;
-	@NotBlank
+	
+	@Column(nullable = true, length = 50)
+    @NotBlank(message = "email é uma informação obrigatória.")
 	private String email;
-	@NotBlank
+	
+	@Column(nullable = true, length = 50)
+    @NotBlank(message = "senha é uma informação obrigatória.")
 	private String senha;
-	@NotBlank
+	
+	@Column(nullable = true, length = 50)
+    @NotBlank(message = "telefone é uma informação obrigatória.")
 	private String telefone;
 	
 	@OneToMany

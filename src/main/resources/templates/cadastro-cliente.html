@@ -1,69 +1,76 @@
 <!DOCTYPE html>
-<html 
-	xmlns="http://www.w3.org/1999/xhtml" 
+<html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:th="http://www.thymeleaf.org"
-	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
->
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 
-	<head>
-		<link href="/webjars/materializecss/0.97.7/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-	
-	    <title>Cliente Security</title>
-	</head>
+<head>
+<link href="/webjars/materializecss/0.97.7/css/materialize.css"
+	type="text/css" rel="stylesheet" media="screen,projection" />
 
-	<body bgcolor="#D0DED7">
-		
-		<div class="container">
-				<div class="row valing-wrapper">
-						<div class="col s6">
-								<h3>Gerenciar Clientes</h3>
-						</div>						
-						
-				</div>						 					 					 					 					 
-				<div class="container-fluid">				
-					<form action="/cadastro-cliente/salvar" method="Post" th:object="${cliente}">
-						
-							<div class="alert alert-success" th:if="${!#strings.isEmpty(mensagem)}">
-								<span th:text="${mensagem}"></span>
-							</div>
-							
-							<div class="form-group">
-								<label for="nome"><strong>Nome</strong></label> 
-								<input id="nome" name="nomeCliente" type="text" class="form-control" th:field="*{nome}"/>								
-							</div>							
-							
-							<div class="form-group">
-								<label for="cpf">CPF</label>
-								<input id="cpf" name="cpfCliente" type="text" class="form-control" th:field="*{cpf}"/>
-							</div>
-														
-							<div class="form-group">
-								<label for="idade">Idade</label>
-								<input id="idade" name="idadeCliente" type="text" class="form-control" th:field="*{idade}"/>
-							</div>
-							<div class="form-group">
-								<label for="email">Email</label>
-								<input id="email" name="emailCliente" type="text" class="form-control" th:field="*{email}"/>
-							</div>
-							<div class="form-group">
-								<label for="senha">Senha</label>
-								<input id="senha" name="senhaCliente" type="text" class="form-control" th:field="*{senha}"/>
-							</div>
-							<div class="form-group">
-								<label for="telefone">Telefone</label>
-								<input id="telefone" name="telefoneCliente" type="text" class="form-control" th:field="*{telefone}"/>
-							</div>							
-													
-							<div class="col s4">
-								<button class="valing btn-large waves-effect waves-light teal right" type="submit" name="action">Cadastrar cliente</button>
-							</div>
-																			
-					</form>					
+<title>Cliente Security</title>
+</head>
+
+<body bgcolor="#D0DED7">
+
+	<div class="container">
+		<div class="row valing-wrapper">
+			<div class="col s6">
+				<h3>Gerenciar Clientes</h3>
+			</div>
+
+		</div>
+				
+		<div class="container-fluid">
+			<form action="/cadastro-cliente/salvar" method="Post" th:object="${cliente}">
+
+				<div class="alert  alert-success" th:if="${!#strings.isEmpty(mensagem)}">
+					<span th:text="${mensagem}"></span>
 				</div>
-							
-		</div>			
-		<script src="/webjars/jquery/2.2.4/jquery.js"></script>
-		<script src="/webjars/materializecss/0.97.7/js/materialize.js"></script>
-	</body>	
+			
+				<div class="form-group">
+					<label for="nome'"> Nome do	cliente</label>
+					<input id="nome" type="text" class="form-control" th:field="*{nome}" /> 
+					
+				</div>
+				<div class="form-group">
+					<label for="cpf'"> Cpf do cliente</label>
+					<input id="cpf" type="text" class="form-control" th:field="*{cpf}" /> 
+					
+				</div>
+
+				<div class="form-group">
+					<label for="idade'"> Idade do cliente</label>
+					<input id="idade" type="text" class="form-control" th:field="*{idade}" /> 
+					
+				</div>
+				
+				<div class="form-group">
+					<label for="email'"> Email do	cliente</label>
+					<input id="email" type="text" class="form-control" th:field="*{email}" /> 
+					
+				</div>
+				<div class="form-group">
+					<label for="senha'"> Senha do	cliente</label>
+					<input id="senha" type="password" class="form-control" th:field="*{senha}" /> 
+					
+				</div>
+				<div class="form-group">
+					<label for="telefone'"> Telefone do	cliente</label>
+					<input id="telefone" type="text" class="form-control" th:field="*{telefone}" /> 
+					
+				</div>
+				<div class="col s4">
+					<button
+						class="valing btn-large waves-effect waves-light teal right"
+						type="submit" name="action">Cadastrar cliente</button>
+				</div>							
+			</form>
+			<a th:href="@{/}" class="btn-large waves-effect waves-light teal">Voltar</a><br/><br/><br/>
+		</div>
+
+	</div>
+	<script src="/webjars/jquery/2.2.4/jquery.js"></script>
+	<script src="/webjars/materializecss/0.97.7/js/materialize.js"></script>
+</body>
 
 </html>
