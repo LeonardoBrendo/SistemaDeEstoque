@@ -15,12 +15,15 @@
 	    	<div class="row center">			        									
 				<form>
 																
-						Digite seu email:<br/>						
-						<input type="text" name="input"/><br/><br/>
+						<div class="input-field col s12">
+							<input placeholder="nome do cliente" id="nome" name="nomeCliente" type="text" />
+							<label for="nome'"> Nome do cliente</label>
+						</div>
 			
-						Digite sua senha:<br/>
-						<input type="password" name="input"/><br/><br/>
-			
+						<div class="input-field col s12">
+								<input placeholder="Cpf do cliente" id="cpf" name="cpfCliente" type="text" /> 
+								<label for="cpf"> Cpf do cliente</label>
+						</div>
 				</form>
 
 		        <a th:href="@{/cadastro-cliente/}" class="btn-large waves-effect waves-light teal">Cadastrar</a>
