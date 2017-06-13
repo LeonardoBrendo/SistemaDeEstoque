@@ -6,24 +6,26 @@
 			<link href="/webjars/materializecss/0.97.7/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 			<title>Sistema de controle de estoque</title>
 	</head>
-	<body bgcolor="#D0DED7">
+	<body>
 		<div class="container">
     		<div class="row center">
 			        <h1 class="header center green-text">Controle de estoque!</h1>			        			        
     		</div>
     					
 	    	<div class="row center">			        									
-				<form>
+				<form method="GET" th:object="${cliente}" >
 																
-						<div class="input-field col s12">
-							<input placeholder="nome do cliente" id="nome" name="nomeCliente" type="text" />
-							<label for="nome'"> Nome do cliente</label>
+						<div class="form-group">
+							<label for="email'"> Email do cliente</label> 
+							<input id="email" type="text" class="form-control" th:field="*{email}" />
+
 						</div>
-			
-						<div class="input-field col s12">
-								<input placeholder="Cpf do cliente" id="cpf" name="cpfCliente" type="text" /> 
-								<label for="cpf"> Cpf do cliente</label>
+						<div class="form-group">
+							<label for="senha'"> Senha do cliente</label> 
+							<input id="senha"	type="password" class="form-control" th:field="*{senha}" />
+		
 						</div>
+
 				</form>
 
 		        <a th:href="@{/cadastro-cliente/}" class="btn-large waves-effect waves-light teal">Cadastrar</a>
