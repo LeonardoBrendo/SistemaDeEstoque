@@ -2,15 +2,14 @@ package leo.web.dev.bean;
 
 import java.util.List;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
-
 import org.hibernate.validator.constraints.NotBlank;
+
 
 @Entity
 public class Cliente {
@@ -19,32 +18,31 @@ public class Cliente {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	
-	@Column(nullable = true, length = 50)
+	
     @NotBlank(message = "Nome é uma informação obrigatória.")
 	private String nome;
 	
-	@Column(nullable = true, length = 50)
-    @NotBlank(message = "cpf é uma informação obrigatória.")
-	private String cpf;
 	
-	@Column(nullable = true, length = 50)
+    @NotNull(message = "cpf é uma informação obrigatória.")
+	private Integer cpf;
+	
+	
     @NotNull(message = "idade é uma informação obrigatória.")
 	private Integer idade;
 	
-	@Column(nullable = true, length = 50)
-    @NotBlank(message = "email é uma informação obrigatória.")
-	private String email;
 	
-	@Column(nullable = true, length = 50)
+	@NotBlank(message = "email é uma informação obrigatória.")
+	private String email;
+		
     @NotBlank(message = "senha é uma informação obrigatória.")
 	private String senha;
 	
-	@Column(nullable = true, length = 50)
-    @NotBlank(message = "telefone é uma informação obrigatória.")
-	private String telefone;
+
+	@NotNull(message = "telefone é uma informação obrigatória.")
+	private Integer telefone;
 	
 	@OneToMany
-	List<Objeto> objetos;
+	List<Produto> objetos;
 	
 	public Cliente() {
 		// TODO Auto-generated constructor stub
@@ -66,11 +64,11 @@ public class Cliente {
 		this.nome = nome;
 	}
 
-	public String getCpf() {
+	public Integer getCpf() {
 		return cpf;
 	}
 
-	public void setCpf(String cpf) {
+	public void setCpf(Integer cpf) {
 		this.cpf = cpf;
 	}
 
@@ -97,20 +95,21 @@ public class Cliente {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
-	public String getTelefone() {
+
+	public Integer getTelefone() {
 		return telefone;
 	}
 
-	public void setTelefone(String telefone) {
+	public void setTelefone(Integer telefone) {
 		this.telefone = telefone;
 	}
 
-	public List<Objeto> getObjetos() {
+	public List<Produto> getObjetos() {
 		return objetos;
 	}
 
-	public void setObjetos(List<Objeto> objetos) {
+	public void setObjetos(List<Produto> objetos) {
 		this.objetos = objetos;
 	}
-		
+	
 }

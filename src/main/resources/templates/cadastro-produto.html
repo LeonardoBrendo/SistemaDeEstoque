@@ -7,7 +7,7 @@
 <link href="/webjars/materializecss/0.97.7/css/materialize.css"
 	type="text/css" rel="stylesheet" media="screen,projection" />
 
-<title>Cadastro de Cliente!</title>
+<title>Cadastro de Produto!</title>
 </head>
 
 <body>
@@ -15,13 +15,13 @@
 	<div class="container">
 		<div class="row valing-wrapper">
 			<div class="col s6">
-				<h4>Realizar Cadastro de Cliente</h4>
+				<h4>Realizar Cadastro de Prdouto</h4>
 			</div>
 
 		</div>
 
 		<div class="container-fluid">
-			<form action="/cadastro-cliente/salvar" method="Post" th:object="${cliente}">
+			<form action="/cadastro-produto/salvar" method="Post" th:object="${produto}">
 
 				<div class="alert alert-danger" role="alert" th:if="${#fields.hasAnyErrors()}">
 					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -41,42 +41,34 @@
 
 				
 				<div class="form-group">
-					<label for="nome'"> Nome do cliente</label> 
+					<label for="nome'"> Nome do Produto</label> 
 					<input id="nome" type="text" class="form-control" th:field="*{nome}" />
 
 				</div>
 				<div class="form-group">
-					<label for="cpf'"> Cpf do cliente</label> 
-					<input id="cpf"	type="text" class="form-control" th:field="*{cpf}" />
+					<label for="peso'"> Peso do Produto</label> 
+					<input id="peso" type="text" class="form-control" th:field="*{peso}" />
 
 				</div>
 
 				<div class="form-group">
-					<label for="idade'"> Idade do cliente</label> <input id="idade"
-						type="text" class="form-control" th:field="*{idade}" />
+					<label for="valor'"> Valor do Produto</label> 
+					<input id="valor" type="text" class="form-control" th:field="*{valor}" />
 
 				</div>
 
 				<div class="form-group">
-					<label for="email'"> Email do cliente</label> <input id="email"
-						type="text" class="form-control" th:field="*{email}" />
+					<label for="tipo'"> Tipo do produto</label> 
+					<input id="tipo" type="text" class="form-control" th:field="*{tipo}" />
 
 				</div>
 				<div class="form-group">
-					<label for="senha'"> Senha do cliente</label> <input id="senha"
-						type="password" class="form-control" th:field="*{senha}" />
+					<label for="quantidade'"> Quantidade do Produto</label> 
+					<input id="quantidade" type="text" class="form-control" th:field="*{quantidade}" />
 
 				</div>
 				<div class="form-group">
-					<label for="telefone'"> Telefone do cliente</label> <input
-						id="telefone" type="text" class="form-control"
-						th:field="*{telefone}" />
-
-				</div>
-				<div class="col s4">
-					<button
-						class="valing btn-large waves-effect waves-light teal right"
-						type="submit" name="action">Cadastrar cliente</button>
+					<button	class="valing btn-large waves-effect waves-light teal right" type="submit" name="action">Cadastrar Produto</button>
 				</div>
 			</form>
 			<a th:href="@{/}" class="btn-large waves-effect waves-light teal">Voltar</a><br />
