@@ -29,6 +29,7 @@ public class ProdutoController {
 	@RequestMapping(path = "/salvar", method = RequestMethod.POST)
 	public ModelAndView salvar(@Valid Produto produto, BindingResult result, RedirectAttributes attributes) {
 		if (result.hasErrors()) {
+			System.out.println("Aqui sim");
 			produto(produto);
 		}
 		produtoService.salvarProduto(produto);
