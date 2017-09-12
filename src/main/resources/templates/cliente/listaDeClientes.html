@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+<link href="/webjars/materializecss/0.97.7/css/materialize.css"
+	type="text/css" rel="stylesheet" media="screen,projection" />
+
+<title>Todos os clientes!</title>
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="row left">
+			<div class="col s6">
+				<h4>Clientes Cadastrados</h4>
+			</div>
+
+		</div>
+
+		<div class="row">					
+					<table class="striped">
+						<thead>
+							<tr>
+								<th>Nome</th>
+								<th>CPF</th>																					
+								<th>Idade</th>
+								<th>Telefone</th>
+								<th>Email</th>
+								<th>Excluir</th>	
+									
+							</tr>
+						</thead>
+						<tbody>
+							<tr th:each="cliente : ${clientes}">
+								<td th:text="${cliente.nome}"></td>
+								<td th:text="${cliente.cpf}"></td>																
+								<td th:text="${cliente.idade}"></td>
+								<td th:text="${cliente.telefone}"></td>
+								<td th:text="${cliente.email}"></td>
+								<td><a class="waves-effect waves-teal btn-flat" th:href="@{/}">Excluir</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			
+				<div class="row left">
+					<a th:href="@{/}" class="btn-large waves-effect waves-light teal">Voltar</a><br />
+				</div>
+			<br />
+			<br />
+		</div>
+	<script src="/webjars/jquery/2.2.4/jquery.js"></script>
+	<script src="/webjars/materializecss/0.97.7/js/materialize.js"></script>
+</body>
+
+</html>

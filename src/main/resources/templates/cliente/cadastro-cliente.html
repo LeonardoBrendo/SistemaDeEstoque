@@ -21,7 +21,7 @@
 		</div>
 
 		<div class="container-fluid">
-			<form action="/cadastro-cliente/salvar" method="Post" th:object="${cliente}">
+			<form action="/indexCliente/salvar" method="Post" th:object="${cliente}">
 
 				<div class="alert alert-danger" role="alert" th:if="${#fields.hasAnyErrors()}">
 					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
