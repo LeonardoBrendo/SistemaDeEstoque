@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+<link href="/webjars/materializecss/0.97.7/css/materialize.css"
+	type="text/css" rel="stylesheet" media="screen,projection" />
+
+<title>Página inicial de Cliente!</title>
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="row valing-wrapper">
+			<div class="col s6">
+				<h5>Informações gerais sobre cliente</h5>
+			</div>
+
+		</div>
+
+		<div class="container-fluid">
+			<form action="/cadastro-cliente/salvar" method="Post" th:object="${cliente.cpf}">
+			
+			</form>
+			<div class="row right" >
+				<a th:href="@{/indexCliente/paginaSalvar}" class="btn-large waves-effect waves-light teal">Cadastrar Cliente</a><br/>
+				<a th:href="@{/indexCliente/listar}" class="btn-large waves-effect waves-light teal">Listar Clientes</a> 
+			</div>
+			
+			<a th:href="@{/}" class="btn-large waves-effect waves-light teal">Voltar</a><br />
+			<br /> <br />
+		</div>
+
+	</div>
+	<script src="/webjars/jquery/2.2.4/jquery.js"></script>
+	<script src="/webjars/materializecss/0.97.7/js/materialize.js"></script>
+</body>
+
+</html>
